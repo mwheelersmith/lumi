@@ -1,0 +1,9 @@
+<nav>
+    <ul class="list-reset flex container mx-auto">
+        {{ nav from="/" include_home="true" scope="tag" }}
+            <li class="flex-1 mr-2">
+                <a href="{{ url }}" class="text-center block text-blue-dark {{ if is_current or is_parent }} text-pink-dark{{ /if }}">{{ tag:nav_title or title }}</a>
+            </li>
+        {{ /nav }}
+    </ul>
+</nav>
